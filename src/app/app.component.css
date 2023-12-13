@@ -1,0 +1,8 @@
+.alert-danger{
+    background-color: white;
+}
+.alert{
+    color: red;
+    margin-bottom: 15px;
+    text-align: left;
+}

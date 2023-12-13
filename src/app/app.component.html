@@ -1,0 +1,38 @@
+<h1>Student Registration Form</h1>
+<div class="conatiner">
+<form #login="ngForm">
+    <div>
+    <label for="name"> Name : </label>
+    <input required minlength="2" type="text" name="user"  [(ngModel)]="user" class="form-control">
+    </div>
+    <br>
+    <div>
+    <label for="number"> Phone Number : </label>
+    <input minlength="2" maxlength="10" type="text" name="number" [(ngModel)]="number" class="form-control"  required>
+
+    </div>
+    <br>
+    <div>
+     <label for="address"> Address : </label>
+     <input required minlength="2" type="text" name="address" [(ngModel)]="address" class="form-control">
+     </div>
+     <br>
+    <div>
+    <label for="collage"> Collage : </label>
+    <input required minlength="2" type="text" name="collage" [(ngModel)]="collage" class="form-control">
+    </div>
+    <br>
+    <button type="submit" (click)="onSubmit()" (click)="onCleartext()">Submit</button>
+</form>
+<br>
+<u></u>
+<br>
+</div>
+<div *ngIf="student">
+    <h2>Submitted Data:</h2>
+    <p>Name: {{ student.user }}</p>
+    <p>Phone Number: {{ student.number }}</p>
+    <p>Address: {{student.address}}</p>
+    <p>Collage: {{ student.collage }}</p>
+    <button type="submit" (click)="onEdit()">Edit</button>
+    </div>
